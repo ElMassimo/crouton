@@ -40,6 +40,10 @@ end
 Three styles are supported out of the box: __info__, __warning__ and __danger__.
 The duration of each message is 1500, 2000 and 3000 respectively.
 
+![screen shot 2014-08-11 at 3 44 10 pm](https://cloud.githubusercontent.com/assets/1158253/3881070/74f526c4-218a-11e4-8ada-63110a789647.png)
+![screen shot 2014-08-11 at 3 43 44 pm](https://cloud.githubusercontent.com/assets/1158253/3881068/74eb79e4-218a-11e4-9734-3a118e9ff853.png)
+![screen shot 2014-08-11 at 3 43 23 pm](https://cloud.githubusercontent.com/assets/1158253/3881069/74ebb8a0-218a-11e4-90e6-3efe5cfade53.png)
+
 You can customize the colours for this three styles by defining the following SASS variables:
  - `$crouton-info`
  - `$crouton-warning`
@@ -48,8 +52,9 @@ You can customize the colours for this three styles by defining the following SA
 You can also create your custom messages:
 
 ```ruby
-  render_crouton Crouton::Message.new(:hint, 'You can double tap for more info.', duration: 5000)
+render_crouton Crouton::Message.new(:hint, 'You can double tap for more info.', duration: 5000)
 ```
+
 
 License
 --------
