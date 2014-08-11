@@ -1,0 +1,42 @@
+$crouton-height: 36px !default;
+$crouton-big-height: $crouton-height*1.5 !default;
+
+$crouton-info: #0A97B1 !default;
+$crouton-warning: #E1AA27 !default;
+$crouton-danger: #B10A0A !default;
+
+.crouton {
+  height: $crouton-height; line-height: $crouton-height;
+  color: white;
+  text-align: center;
+  font-weight: 100;
+  position: relative;
+
+  &.crouton-info {
+    background: $crouton-info;
+  }
+  &.crouton-warning {
+    background: $crouton-warning;
+  }
+  &.crouton-danger{
+    background: $crouton-danger;
+  }
+}
+
+.crouton, .crouton + .card-content {
+  box-shadow: inset 0px 4px 6px -7px black;
+}
+
+.crouton > .close {
+  position: absolute;
+  right: 8px;
+  font-size: 28px;
+  line-height: inherit;
+}
+
+.crouton-big {
+  height: inherit;
+  line-height: $crouton-big-height - 20px;
+  font-size: 25px;
+  padding: 8px 10%;
+}
