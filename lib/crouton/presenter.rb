@@ -5,20 +5,21 @@ module Crouton
     attr_reader :placeholder, :messages
     delegate :each, to: :messages
 
-    def initialize(options={})
+    def initialize(messages, options={})
       @placeholder = options.delete(:placeholder) || '.crouton-placeholder'
-      @messages = options[:messages] || messages_for(options).presence || [Message.new]
+      messages = from_hash(messages) if messages.is_a?(Hash)
+      @messages = *messages
     end
 
     private
 
-    def messages_for(options)
-      messages = options.delete_if {|name, msg| msg.blank? }
+    def from_hash(messages)
+      messages.delete_if {|name, msg| msg.blank? }
 
       if (errors = messages[:errors]).present?
         errors_to_messages(errors)
       else
-        messages.map(&Message)
+        messages.map(&Message).presence || [Message.new]
       end
     end
 

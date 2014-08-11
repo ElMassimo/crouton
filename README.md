@@ -55,7 +55,6 @@ You can also create your custom messages:
 render_crouton Crouton::Message.new(:hint, 'You can double tap for more info.', duration: 5000)
 ```
 
-
 License
 --------
 

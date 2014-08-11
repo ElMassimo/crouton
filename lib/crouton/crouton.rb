@@ -3,9 +3,8 @@ require 'crouton/presenter'
 module Crouton
 
   module Concern
-    def render_crouton(messages=nil, options={})
-      options[:messages] ||= *messages
-      render partial: 'crouton/croutons', locals: { croutons: Presenter.new(options) }
+    def render_crouton(messages={}, options={})
+      render partial: 'crouton/croutons', locals: { croutons: Presenter.new(messages, options) }
     end
   end
 
