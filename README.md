@@ -20,8 +20,8 @@ Simply require `crouton` in your javascript and css:
 @import crouton
 ```
 
-Now, use the `render_crouton` method in your controllers, any option you pass
-will be converted to a message, and displayed in the browser.
+Then, use the `render_crouton` method in your controllers, any option you pass
+will be converted to a message.
 
 ``` ruby
 class PostsController < ActionController::Base
@@ -34,6 +34,14 @@ class PostsController < ActionController::Base
     end
   end
 end
+```
+
+Finally, find a good spot in your HTML for the Crouton, and add the
+`.crouton-placeholder` CSS class in the container of choice.
+
+```html
+<div class="content crouton-placeholder">
+  ...
 ```
 
 ## Customization
@@ -52,7 +60,7 @@ You can customize the colours for this three styles by defining the following SA
 You can also create your custom messages:
 
 ```ruby
-render_crouton Crouton::Message.new(:hint, 'You can double tap for more info.', duration: 5000)
+render_crouton Crouton::Message.new(:hint, 'You can double tap for more info.', duration: 5000), placeholder: '.custom-crouton-placeholder'
 ```
 
 License
