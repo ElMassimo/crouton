@@ -5,9 +5,9 @@ module Crouton
     DEFAULT_MESSAGE = 'Saved'
     CSS = { notice: :info, error: :danger, alert: :warning }
 
-    def initialize(type=:info, content=DEFAULT_MESSAGE, duration: nil)
+    def initialize(type=:info, content=DEFAULT_MESSAGE, options={})
       @type, @content = type.to_sym, content
-      @duration = duration || default_duration
+      @duration = options[:duration] || default_duration
     end
 
     def css

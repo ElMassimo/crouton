@@ -7,7 +7,7 @@ module Crouton
 
     def initialize(options={})
       @placeholder = options.delete(:placeholder) || '.crouton-placeholder'
-      @messages = messages_for(options).presence || [Message.new]
+      @messages = options[:messages] || messages_for(options).presence || [Message.new]
     end
 
     private

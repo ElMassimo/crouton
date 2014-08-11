@@ -36,6 +36,20 @@ class PostsController < ActionController::Base
 end
 ```
 
+## Customization
+Three styles are supported out of the box: __info__, __warning__ and __danger__.
+The duration of each message is 1500, 2000 and 3000 respectively.
+
+You can customize the colours for this three styles by defining the following SASS variables:
+ - `$crouton-info`
+ - `$crouton-warning`
+ - `$crouton-danger`
+
+You can also create your custom messages:
+
+```ruby
+  render_crouton Crouton::Message.new(:hint, 'You can double tap for more info.', duration: 5000)
+```
 
 License
 --------
@@ -60,3 +74,9 @@ License
     LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
     OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
     WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+Credits
+--------
+
+The name and the idea of Crouton originates in a [blog article](http://cyrilmottier.com/2012/07/24/the-making-of-prixing-4-activity-tied-notifications/) by Cyril Mottier.
