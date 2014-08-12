@@ -17,7 +17,7 @@ Simply require `crouton` in your javascript and css:
 ```
 
 ``` sass
-@import crouton
+@import 'crouton';
 ```
 
 Then, use the `render_crouton` method in your controllers, any option you pass
