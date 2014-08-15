@@ -1,6 +1,5 @@
-Crouton
+Crouton [![Gem Version](https://badge.fury.io/rb/crouton.svg)](http://badge.fury.io/rb/crouton) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ElMassimo/queryable/blob/master/LICENSE.txt)
 =====================
-[![Gem Version](https://badge.fury.io/rb/crouton.svg)](http://badge.fury.io/rb/crouton)
 
 Context sensitive notifications for Rails && XHR.
 
