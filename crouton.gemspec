@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name = "crouton"
-  s.version = '0.1.0'
+  s.version = '0.1.1'
   s.description = "Context sensitive notifications for Rails."
   s.summary = "Context sensitive notifications for Rails, the name and idea originated in a blog article written by Cyril Mottier on Android notifications."
   s.licenses = ['MIT']
